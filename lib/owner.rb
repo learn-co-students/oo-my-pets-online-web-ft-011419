@@ -1,7 +1,7 @@
 require 'pry'
 
 class Owner
-  
+
   attr_accessor :name, :pets
   
   attr_reader :species
@@ -21,7 +21,7 @@ class Owner
   end  
   
   def self.count 
-    @@count
+    @@all.size
   end  
 
   def self.all 
@@ -78,6 +78,6 @@ class Owner
   
   def self.reset_all
     @@all.clear
-  end
+  end  
  
 end
