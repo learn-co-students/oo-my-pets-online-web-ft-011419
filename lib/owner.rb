@@ -2,22 +2,34 @@ require 'pry'
 
 class Owner
   
-  attr_accessor :name, :pets, :species
+  attr_accessor :name, :pets
   
+  attr_reader :species
+  
+  @@count = 0
   @@all = []
   
-  def initialize(pets, species, name)
+  def initialize(pets, species = "human")
     @pets = {fishes: [], cats: [], dogs: []}
+    @species = species
     @@all << self
-    @@count = self.count
+    @@count += 1
+  end  
+  
+  def say_species
+    "I am a human."
+  end  
+  
+  def self.count 
+    @@count
   end  
 
   def self.all 
     @@all 
   end  
  
-  def name 
-    owner.name = name 
+  def self.name 
+    name = self.name
   end  
  
   def buy_fish
