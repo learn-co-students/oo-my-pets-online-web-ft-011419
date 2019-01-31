@@ -64,7 +64,8 @@ class Owner
   end  
   
   def sell_pets 
-    
+    pets.each do |pet|
+      
   end 
   
   def list_pets 
@@ -72,7 +73,7 @@ class Owner
   end  
   
   def self.reset_all
-    OWNER.clear
+    @@all.clear
   end
  
 end
