@@ -63,4 +63,13 @@ class Owner
     end 
   end  
   
+  def sell_pets 
+    
+  end 
+  
+  def list_pets 
+    "I have #{:fishes.count} fish, #{:dogs.count} dogs, and #{:cats.count}."
+  end  
+    
+  
 end
